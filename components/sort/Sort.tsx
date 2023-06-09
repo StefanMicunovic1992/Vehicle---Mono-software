@@ -18,13 +18,17 @@ interface OptionsForSortProps {
   label: string;
 }
 
-function Sort() {
+interface SortProps {
+  setPageNumber: React.Dispatch<React.SetStateAction<number>>
+}
+
+function Sort({ setPageNumber }: SortProps) {
   const vehiclesStore = useVehiclesStore();
+
   const sortByPrice = (selected: OptionsForSortProps | null) => {
     const inputString = selected?.value;
 
-    if (
-      inputString !== null && inputString !== 'random' && inputString !== undefined) {
+    if (inputString !== null && inputString !== 'random' && inputString !== undefined) {
       const parts = inputString.split('(');
       const typeOfSort = parts[0].trim();
       const descOrAsc = parts[1].slice(0, -1).trim();
@@ -37,6 +41,8 @@ function Sort() {
     } else {
       vehiclesStore.sortRandom();
     }
+
+    setPageNumber(1);
   };
   return (
     <article>

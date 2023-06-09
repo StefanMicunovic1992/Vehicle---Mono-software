@@ -6,10 +6,11 @@ import './Pagination.scss';
 
 interface PaginationProps {
   setPageNumber: React.Dispatch<React.SetStateAction<number>>,
-  totalPage: number
+  totalPage: number,
+  pageNumber: number,
 }
 
-function PaginationPage({ setPageNumber, totalPage }: PaginationProps) {
+function PaginationPage({ setPageNumber, pageNumber, totalPage }: PaginationProps) {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPageNumber(value);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -17,7 +18,7 @@ function PaginationPage({ setPageNumber, totalPage }: PaginationProps) {
   return (
     <article className="pagination">
       <Stack spacing={2}>
-        <Pagination count={totalPage} color="primary" size="large" onChange={handleChange} />
+        <Pagination page={pageNumber} count={totalPage} color="primary" size="large" onChange={handleChange} />
       </Stack>
     </article>
   );

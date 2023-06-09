@@ -20,6 +20,7 @@ function Home() {
   const carsPerPage = 9;
 
   useEffect(() => {
+    console.log(pageNumber);
     if (pageNumber === 1) {
       setCarForRender(vehiclesStore.filterVehicle.slice(pageNumber - 1, carsPerPage));
     } else {
@@ -33,7 +34,7 @@ function Home() {
     <main>
       <section className="filtersAndSortSection">
         <Filters />
-        <Sort />
+        <Sort setPageNumber={setPageNumber} />
       </section>
       <section className="carsSection">
         {carForRender.map((car) => (
@@ -41,7 +42,7 @@ function Home() {
         ))}
       </section>
       <section className="paginationSection">
-        <PaginationPage setPageNumber={setPageNumber} totalPage={totalPage} />
+        <PaginationPage setPageNumber={setPageNumber} pageNumber={pageNumber} totalPage={totalPage} />
       </section>
       <section>{showOrHideGallery && <Gallery setShowOrHideGallery={setShowOrHideGallery} />}</section>
     </main>
