@@ -1,0 +1,302 @@
+[
+  {
+    "id": "1",
+    "name": "Audi",
+    "model": "Q5",
+    "price": 70000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53591/q5-facelift-exterior-right-front-three-quarter-35.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53591/q5-facelift-exterior-right-front-three-quarter-3.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53591/q5-facelift-exterior-right-rear-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53591/q5-facelift-interior-dashboard.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "MINI",
+    "model": "Cooper JCW",
+    "price": 50000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/114541/mini-cooper-jcw-right-front-three-quarter4.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39603/cooper-jcw-exterior-left-rear-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39603/cooper-jcw-exterior-right-front-three-quarter-2.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39603/cooper-jcw-interior-steering-wheel.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Porsche",
+    "model": "Cayenne",
+    "price": 100000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/43728/cayenne-coupe-exterior-right-front-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/43728/porsche-cayenne-coupe-exterior-3.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/43728/cayenne-coupe-exterior-right-rear-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/43728/cayenne-coupe-interior-dashboard.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Audi",
+    "model": "RS5",
+    "price": 95000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/100073/rs5-exterior-right-front-three-quarter-3.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/100073/rs5-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/100073/rs5-exterior-right-rear-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/100073/rs5-interior-dashboard.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Mercedes-Benz",
+    "model": "AMG A35",
+    "price": 120000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/94041/amg-a35-limousine-exterior-right-side-view-2.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/94041/amg-a35-exterior-right-front-three-quarter-5.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/94041/amg-a35-limousine-interior-steering-wheel.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/94041/amg-a35-limousine-exterior-engine-shot.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Lexus",
+    "model": "UX 300e",
+    "price": 85000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/128227/ux-300e-exterior-right-side-view-3.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/128227/ux-300e-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/128227/ux-300e-exterior-left-rear-three-quarter-3.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/128227/ux-300e-exterior-engine-shot.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "BMW",
+    "model": "X7",
+    "price": 110000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/136217/x7-exterior-right-front-three-quarter-7.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/136217/x7-facelift-exterior-right-front-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/136217/x7-exterior-rear-view-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/136217/x7-facelift-interior-dashboard.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Skoda",
+    "model": "Kushaq",
+    "price": 70000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44549/kushaq-exterior-right-front-three-quarter-53.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44549/kushaq-exterior-right-side-view-3.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44549/kushaq-exterior-rear-view-2.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/44549/kushaq-interior-dashboard-2.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Suzuki",
+    "model": "Jimny",
+    "price": 83000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/45299/jimny-exterior-right-front-three-quarter-22.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/45299/jimny-exterior-right-side-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/45299/jimny-exterior-rear-view-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/45299/jimny-interior-dashboard-2.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Mercedes-Benz",
+    "model": "G-Class",
+    "price": 150000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/36129/g-class-exterior-front-view-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/36129/g-class-exterior-front-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/36129/g-class-exterior-left-side-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/36129/g-class-interior-steering-wheel.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Land Rover",
+    "model": "Defender",
+    "price": 96000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131681/land-rover-defender-right-front-three-quarter17.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131681/land-rover-defender-right-rear-three-quarter16.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131681/land-rover-defender-left-rear-three-quarter13.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/55215/defender-interior-dashboard.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Hyundai",
+    "model": "Ioniq 5",
+    "price": 76000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/110289/ioniq-exterior-left-rear-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/141829/hyundai-ioniq-5-right-rear-three-quarter3.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/141829/hyundai-ioniq-5-right-front-three-quarter16.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/110289/ioniq-5-interior-dashboard.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Jeep",
+    "model": "Wrangler",
+    "price": 82000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/54437/wrangler-exterior-right-front-three-quarter-51.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/54437/wrangler-exterior-right-rear-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/54437/wrangler-exterior-left-front-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/54437/wrangler-interior-steering-wheel-2.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Land Rover",
+    "model": "Range Rover",
+    "price": 105000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/107719/range-rover-exterior-right-front-three-quarter-45.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/107719/range-rover-exterior-right-rear-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/107719/range-rover-exterior-grille-40.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/107719/range-rover-interior-dashboard.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Hyundai",
+    "model": "Tucson",
+    "price": 96000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/106821/tucson-exterior-right-front-three-quarter-6.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/106821/tucson-exterior-left-rear-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/106821/tucson-exterior-grille.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/106821/tucson-interior-steering-wheel.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Jaguar",
+    "model": "XF",
+    "price": 88000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/32857/Jaguar-XF-Instrument-Panel-117753.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/32857/Jaguar-XF-Rear-view-117750.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/32857/Jaguar-XF-Front-view-117754.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/19826/xf-interior-steering-wheel.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Volvo",
+    "model": "XC90",
+    "price": 90000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131135/xc90-exterior-right-front-three-quarter-105.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131135/xc90-exterior-left-rear-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131223/volvo-xc90-right-side-view25.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131135/xc90-interior-steering-wheel.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Audi",
+    "model": "A4",
+    "price": 64000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/51909/a4-exterior-right-front-three-quarter-79.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/51909/a4-exterior-left-front-three-quarter-3.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/52421/audi-a4-right-front-three-quarter69.jpeg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/51909/a4-interior-steering-wheel.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "BMW",
+    "model": "7 Series",
+    "price": 150000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/132513/new-7-series-exterior-left-front-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/132513/new-7-series-exterior-front-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/132513/new-7-series-exterior-rear-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/132513/new-7-series-exterior-right-rear-three-quarter.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Jaguar",
+    "model": "F-Type",
+    "price": 93000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/46994/jaguar-f-type-left-side-view1.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/46994/jaguar-f-type-exterior9.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/10848/Jaguar-FType-Exterior-151587.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/33844/2018-Jaguar-F-Type-SVR-124305.jpg?wm=1&q=75"
+    ]
+  },
+  {
+    "id": "21",
+    "name": "Skoda",
+    "model": "Superb",
+    "price": 61000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39039/superb-exterior-right-front-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39039/superb-exterior-left-rear-three-quarter.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39039/superb-exterior-daytime-running-lamp-drl.jpeg?q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/39039/superb-interior-steering-wheel.jpeg?q=75&wm=1"
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Skoda",
+    "model": "Kodiaq",
+    "price": 74000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/49051/kodiaq-exterior-right-front-three-quarter-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/49051/kodiaq-exterior-left-rear-three-quarter-2.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/148205/skoda-kodiaq-right-front-three-quarter14.jpeg?isig=0&wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/49051/kodiaq-exterior-front-fender.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Volkswagen",
+    "model": "Tiguan",
+    "price": 80000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53123/tiguan-exterior-right-front-three-quarter-8.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53123/tiguan-exterior-right-side-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53123/tiguan-exterior-wheel.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/53123/tiguan-interior-steering-wheel.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Volvo",
+    "model": "S90",
+    "price": 89000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131145/s90-exterior-left-front-three-quarter.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/131145/s90-exterior-front-view.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/105969/interior-steering-wheel.jpeg?isig=0&q=75&wm=1",
+      "https://imgd.aeplcdn.com/1056x594/n/cw/ec/105969/exterior-left-rear-three-quarter.jpeg?isig=0&q=75&wm=1"
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Porsche",
+    "model": "Panamera",
+    "price": 125000,
+    "image": [
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/28304/Porsche-Panamera-Rear-view-164340.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/28304/Porsche-Panamera-Exterior-164348.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/28304/Porsche-Panamera-WheelsTyres-164347.jpg?wm=1&q=75",
+      "https://imgd.aeplcdn.com/1056x594/cw/ec/28304/Porsche-Panamera-Exterior-164342.jpg?wm=1&q=75"
+    ]
+  }
+]
