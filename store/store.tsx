@@ -52,22 +52,22 @@ export default class Vehicles {
 
   sortByPrice(descOrAsc: string) {
     if (descOrAsc === 'desc') {
-      this.filterVehicle = this.filterVehicle.sort((a, b) => b.price - a.price);
+      this.filterVehicle = [...this.filterVehicle].sort((a, b) => b.price - a.price);
     } else {
-      this.filterVehicle = this.filterVehicle.sort((a, b) => a.price - b.price);
+      this.filterVehicle = [...this.filterVehicle].sort((a, b) => a.price - b.price);
     }
   }
 
   sortByName(descOrAsc: string) {
     if (descOrAsc === 'desc') {
-      this.filterVehicle = this.filterVehicle.sort((a, b) => a.name.localeCompare(b.name));
+      this.filterVehicle = [...this.filterVehicle].sort((a, b) => a.name.localeCompare(b.name));
     } else {
-      this.filterVehicle = this.filterVehicle.sort((a, b) => b.name.localeCompare(a.name));
+      this.filterVehicle = [...this.filterVehicle].sort((a, b) => b.name.localeCompare(a.name));
     }
   }
 
   sortRandom() {
-    this.filterVehicle = this.filterVehicle.sort((a, b) => +a.id - +b.id);
+    this.filterVehicle = [...this.filterVehicle].sort((a, b) => +a.id - +b.id);
   }
 
   getByBrands(nameOfMark: string) {

@@ -9,10 +9,11 @@ import Filters from '@/components/filters/Filters';
 import Sort from '@/components/sort/Sort';
 import Pagination from '@/components/pagination/Pagination';
 import Gallery from '@/components/gallery/Gallery';
+import VehicleI from '@/interface/Vehicle';
 
 function Home() {
   const vehiclesStore = useVehiclesStore();
-  const [carForRender, setCarForRender] = useState(vehiclesStore.filterVehicle);
+  const [carForRender, setCarForRender] = useState<VehicleI[]>(vehiclesStore.filterVehicle);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [totalPage, setTotalPage] = useState<number>(0);
   const [showOrHideGallery, setShowOrHideGallery] = useState<boolean>(false);
@@ -31,8 +32,8 @@ function Home() {
       top: 0,
       behavior: 'smooth',
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vehiclesStore.filterVehicle, pageNumber]);
+  }, [pageNumber, vehiclesStore.filterVehicle]);
+
   return (
     <main>
       <section className="filtersAndSortSection">
