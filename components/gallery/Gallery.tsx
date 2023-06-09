@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useVehiclesStore } from '@/store/store';
 import { observer } from 'mobx-react';
 import Image from 'next/image';
