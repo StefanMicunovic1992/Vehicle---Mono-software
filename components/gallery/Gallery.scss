@@ -1,0 +1,92 @@
+.carusel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  gap: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+
+  .icons {
+    font-size: 2rem;
+    color: whitesmoke;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.3s;
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transition: 0.2s;
+      color: chocolate;
+    }
+  }
+
+  .closeIcons {
+    position: absolute;
+    top: 2%;
+    right: 3.5%;
+  }
+
+  .imageGallery {
+    width: 70%;
+    height: 75%;
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  .effectRight {
+    animation-name: animationRight;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+  }
+
+  @keyframes animationRight {
+    0% {
+      transform: translateX(0%);
+      opacity: 0.7;
+    }
+    30% {
+      transform: translateX(-40%);
+      opacity: 0.3;
+    }
+    70% {
+      transform: translateX(150%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  .effectLeft {
+    animation-name: animationLeft;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+  }
+
+  @keyframes animationLeft {
+    0% {
+      transform: translateX(0%);
+      opacity: 0.7;
+    }
+    30% {
+      transform: translateX(40%);
+      opacity: 0.3;
+    }
+    70% {
+      transform: translateX(-150%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+}
