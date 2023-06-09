@@ -7,7 +7,7 @@ import { observer } from 'mobx-react';
 import Vehicle from '@/components/vehicle/Vehicle';
 import Filters from '@/components/filters/Filters';
 import Sort from '@/components/sort/Sort';
-import Pagination from '@/components/pagination/Pagination';
+import PaginationPage from '@/components/pagination/Pagination';
 import Gallery from '@/components/gallery/Gallery';
 import VehicleI from '@/interface/Vehicle';
 
@@ -23,15 +23,10 @@ function Home() {
     if (pageNumber === 1) {
       setCarForRender(vehiclesStore.filterVehicle.slice(pageNumber - 1, carsPerPage));
     } else {
-      setCarForRender(vehiclesStore.filterVehicle.slice(((pageNumber - 1) * carsPerPage), (pageNumber * carsPerPage)));
+      setCarForRender(vehiclesStore.filterVehicle.slice((pageNumber - 1) * carsPerPage, pageNumber * carsPerPage));
     }
 
     setTotalPage(Math.ceil(vehiclesStore.filterVehicle.length / carsPerPage));
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
   }, [pageNumber, vehiclesStore.filterVehicle]);
 
   return (
@@ -46,11 +41,9 @@ function Home() {
         ))}
       </section>
       <section className="paginationSection">
-        <Pagination setPageNumber={setPageNumber} pageNumber={pageNumber} totalPage={totalPage} />
+        <PaginationPage setPageNumber={setPageNumber} totalPage={totalPage} />
       </section>
-      <section>
-        {showOrHideGallery && <Gallery setShowOrHideGallery={setShowOrHideGallery} />}
-      </section>
+      <section>{showOrHideGallery && <Gallery setShowOrHideGallery={setShowOrHideGallery} />}</section>
     </main>
   );
 }

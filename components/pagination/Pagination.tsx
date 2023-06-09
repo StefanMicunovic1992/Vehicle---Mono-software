@@ -1,28 +1,26 @@
 import React from 'react';
-import { useVehiclesStore } from '@/store/store';
 import { observer } from 'mobx-react';
+import Stack from '@mui/material/Stack';
+import Pagination from '@mui/material/Pagination';
 import './Pagination.scss';
 
 interface PaginationProps {
   setPageNumber: React.Dispatch<React.SetStateAction<number>>,
-  pageNumber: number,
   totalPage: number
 }
 
-function Pagination({ setPageNumber, pageNumber, totalPage }: PaginationProps) {
-  const vehiclesStore = useVehiclesStore();
-  console.log(vehiclesStore.filterVehicle.length);
+function PaginationPage({ setPageNumber, totalPage }: PaginationProps) {
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPageNumber(value);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <article className="pagination">
-      {pageNumber > 1 ? <button type="button" onClick={() => setPageNumber((prev) => prev - 1)}>back</button> : <button type="button" disabled>back</button>}
-      <h4>
-        {pageNumber}
-        /
-        {totalPage}
-      </h4>
-      {pageNumber < totalPage ? <button type="button" onClick={() => setPageNumber((prev) => prev + 1)}>forward</button> : <button type="button" disabled>forward</button>}
+      <Stack spacing={2}>
+        <Pagination count={totalPage} color="primary" size="large" onChange={handleChange} />
+      </Stack>
     </article>
   );
 }
 
-export default observer(Pagination);
+export default observer(PaginationPage);
