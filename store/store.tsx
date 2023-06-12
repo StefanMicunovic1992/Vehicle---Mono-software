@@ -9,6 +9,13 @@ interface FilterItem {
   label: string;
 }
 
+interface AddNewCarProps {
+  name: string,
+  model: string,
+  price: number,
+  image: string[],
+}
+
 export default class Vehicles {
   vehicles: VehicleI[] = [];
 
@@ -37,6 +44,19 @@ export default class Vehicles {
           this.getByBrands(this.filters);
         }
       })
+      .catch((error) => console.log(error));
+  }
+
+  addNewCar(dataOfCar: AddNewCarProps) {
+    return fetch('https://64652db89c09d77a62e63425.mockapi.io/vehicle', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataOfCar),
+    })
+      .then((res) => res.json())
+      .then((res) => res)
       .catch((error) => console.log(error));
   }
 
