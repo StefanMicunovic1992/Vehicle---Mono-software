@@ -13,7 +13,6 @@ interface PaginationProps {
 function PaginationPage({ setPageNumber, pageNumber, totalPage }: PaginationProps) {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPageNumber(value);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
     <article className="pagination">
