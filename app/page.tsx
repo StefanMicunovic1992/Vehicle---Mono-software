@@ -9,6 +9,7 @@ import Filters from '@/components/filters/Filters';
 import Sort from '@/components/sort/Sort';
 import PaginationPage from '@/components/pagination/Pagination';
 import Gallery from '@/components/gallery/Gallery';
+import AddCar from '@/components/add-car/AddCar';
 import VehicleI from '@/interface/Vehicle';
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
   const carsPerPage = 9;
 
   useEffect(() => {
-    console.log(pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (pageNumber === 1) {
       setCarForRender(vehiclesStore.filterVehicle.slice(pageNumber - 1, carsPerPage));
     } else {
@@ -35,6 +36,7 @@ function Home() {
       <section className="filtersAndSortSection">
         <Filters />
         <Sort setPageNumber={setPageNumber} />
+        <AddCar />
       </section>
       <section className="carsSection">
         {carForRender.map((car) => (
