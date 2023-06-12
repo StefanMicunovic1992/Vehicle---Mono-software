@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
+import './Gallery.scss';
 import { useVehiclesStore } from '@/store/store';
 import { observer } from 'mobx-react';
 import Image from 'next/image';
-import './Gallery.scss';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import { RiCloseCircleFill } from 'react-icons/ri';
 
@@ -43,7 +43,9 @@ function Gallery({ setShowOrHideGallery }: GalleryProps) {
     <article className="carusel">
       <RiCloseCircleFill className="icons closeIcons" onClick={closeGallery} />
       <FaArrowCircleLeft className="icons" onClick={backwardImage} />
-      <Image className="imageGallery" ref={imageRef} src={vehiclesStore.imagesForGallery[imageInArray]} alt="vehicles" width={1000} height={1000} />
+      <div className="wrapperImage">
+        <Image className="imageGallery" ref={imageRef} src={vehiclesStore.imagesForGallery[imageInArray]} alt="vehicles" fill />
+      </div>
       <FaArrowCircleRight className="icons" onClick={forwardImage} />
     </article>
   );

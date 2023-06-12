@@ -4,10 +4,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  gap: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5%;
+  padding: 20px;
   background-color: rgba($color: #000000, $alpha: 0.8);
 
   .icons {
@@ -33,12 +34,17 @@
     right: 3.5%;
   }
 
-  .imageGallery {
-    width: 70%;
-    height: 75%;
-    opacity: 1;
-    border-radius: 10px;
+  .wrapperImage {
+    width: 80%;
+    height: 95%;
+    position: relative;
+
+    .imageGallery {
+      opacity: 1;
+      border-radius: 10px;
+    }
   }
+
 
   .effectRight {
     animation-name: animationRight;
