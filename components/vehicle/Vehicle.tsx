@@ -2,11 +2,11 @@
 
 import './Vehicle.scss';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import VehicleI from '@/interface/Vehicle';
 import { observer } from 'mobx-react';
 import { useVehiclesStore } from '@/store/store';
 import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
 import { FaMoneyBillAlt } from 'react-icons/fa';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PriceChangeOutlinedIcon from '@mui/icons-material/PriceChangeOutlined';
@@ -42,6 +42,7 @@ function Vehicle({ car, setShowOrHideGallery }: VehicleProps) {
   };
 
   function formatPrice(priceOfCar: number) {
+    console.log(priceOfCar);
     const formattedPrice = priceOfCar.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     return `$${formattedPrice}`;
   }
@@ -49,13 +50,9 @@ function Vehicle({ car, setShowOrHideGallery }: VehicleProps) {
   return (
     <Card className="car">
       <h2>{[name, ' ', model]}</h2>
-      <CardMedia
-        className="imageOfCar"
-        component="img"
-        image={image[0]}
-        alt={model}
-        onClick={showCarusel}
-      />
+      <div className="wrapperImage">
+        <Image className="imageOfCar" src={image[0]} alt={model} width={500} height={500} quality={100} onClick={showCarusel} />
+      </div>
       <div className="price">
         <FaMoneyBillAlt className="icon" />
         <h3>{formatPrice(price)}</h3>
