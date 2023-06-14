@@ -2,6 +2,7 @@ import React from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { VehiclesProvider } from '@/store/store';
+import Header from '@/components/header/Header';
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
+        <Header />
         <VehiclesProvider>
           {children}
         </VehiclesProvider>
