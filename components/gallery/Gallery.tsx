@@ -16,23 +16,22 @@ function Gallery({ setShowOrHideGallery }: GalleryProps) {
   const [imageInArray, setImageInArray] = useState<number>(0);
 
   const forwardImage = () => {
-    imageRef.current?.classList.add('effectRight');
+    imageRef.current?.classList.add('moveRight');
     setTimeout(() => {
       setImageInArray((prev) => (prev === vehiclesStore.imagesForGallery.length - 1 ? 0 : prev + 1));
     }, 600);
-    setTimeout(() => {
-      imageRef.current?.classList.remove('effectRight');
-    }, 1000);
   };
 
   const backwardImage = () => {
-    imageRef.current?.classList.add('effectLeft');
+    imageRef.current?.classList.add('moveLeft');
     setTimeout(() => {
       setImageInArray((prev) => (prev === 0 ? 3 : prev - 1));
     }, 600);
-    setTimeout(() => {
-      imageRef.current?.classList.remove('effectLeft');
-    }, 1000);
+  };
+
+  const fadeInEffect = () => {
+    imageRef.current?.classList.remove('moveLeft');
+    imageRef.current?.classList.remove('moveRight');
   };
 
   const closeGallery = () => {
@@ -44,7 +43,7 @@ function Gallery({ setShowOrHideGallery }: GalleryProps) {
       <RiCloseCircleFill className="icons closeIcons" onClick={closeGallery} />
       <FaArrowCircleLeft className="icons" onClick={backwardImage} />
       <div className="wrapperImage">
-        <Image className="imageGallery" ref={imageRef} src={vehiclesStore.imagesForGallery[imageInArray]} alt="vehicles" fill />
+        <Image className="imageGallery" ref={imageRef} src={vehiclesStore.imagesForGallery[imageInArray]} alt="vehicles" fill priority onLoad={fadeInEffect} />
       </div>
       <FaArrowCircleRight className="icons" onClick={forwardImage} />
     </article>
