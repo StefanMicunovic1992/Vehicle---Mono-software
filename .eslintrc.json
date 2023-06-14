@@ -6,8 +6,8 @@
   },
   "rules": {
     "no-console": "off",
-    "react/jsx-props-no-spreading": "off",
     "max-len": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react-hooks/exhaustive-deps": "off"
   }
 }
