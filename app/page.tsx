@@ -14,14 +14,16 @@ import VehicleI from '@/interface/Vehicle';
 
 function Home() {
   const vehiclesStore = useVehiclesStore();
+  const carsPerPage = 9;
+
   const [carForRender, setCarForRender] = useState<VehicleI[]>(vehiclesStore.filterVehicle);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [totalPage, setTotalPage] = useState<number>(0);
   const [showOrHideGallery, setShowOrHideGallery] = useState<boolean>(false);
-  const carsPerPage = 9;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
     if (pageNumber === 1) {
       setCarForRender(vehiclesStore.filterVehicle.slice(pageNumber - 1, carsPerPage));
     } else {
