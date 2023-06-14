@@ -1,0 +1,11 @@
+.sort {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+
+    .sortSelect {
+        width: 8vw;
+        text-align: left;
+    }
+}
