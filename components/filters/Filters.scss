@@ -1,0 +1,11 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+
+    .filterSelect {
+        width: 25vh;
+        text-align: left;
+    }
+}
