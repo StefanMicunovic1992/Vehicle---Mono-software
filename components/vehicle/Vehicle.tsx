@@ -42,7 +42,6 @@ function Vehicle({ car, setShowOrHideGallery }: VehicleProps) {
   };
 
   function formatPrice(priceOfCar: number) {
-    console.log(priceOfCar);
     const formattedPrice = priceOfCar.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     return `$${formattedPrice}`;
   }
@@ -51,7 +50,7 @@ function Vehicle({ car, setShowOrHideGallery }: VehicleProps) {
     <Card className="car">
       <h2>{[name, ' ', model]}</h2>
       <div className="wrapperImage">
-        <Image className="imageOfCar" src={image[0]} alt={model} width={500} height={500} quality={100} onClick={showCarusel} />
+        <Image className="imageOfCar" src={image[0]} alt={model} width={500} height={500} quality={100} onClick={showCarusel} priority />
       </div>
       <div className="price">
         <FaMoneyBillAlt className="icon" />
