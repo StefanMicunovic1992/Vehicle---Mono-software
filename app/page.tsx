@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './Home.scss';
-import { useVehiclesStore } from '@/store/store';
+import { useVehiclesStore } from '@/common/store/store';
 import { observer } from 'mobx-react';
 import Vehicle from '@/components/vehicle/Vehicle';
 import Filters from '@/components/filters/Filters';
@@ -10,12 +10,15 @@ import Sort from '@/components/sort/Sort';
 import PaginationPage from '@/components/pagination/Pagination';
 import Gallery from '@/components/gallery/Gallery';
 import AddCar from '@/components/add-car/AddCar';
-import VehicleI from '@/interface/Vehicle';
+import Fuel from '@/components/fuel/Fuel';
+import VehicleI from '@/common/interface/Vehicle';
+import useFilterParamsFromUrl from '@/common/hooks/useQueryParamsFromUrl';
 
 function Home() {
+  useFilterParamsFromUrl();
   const vehiclesStore = useVehiclesStore();
-  const carsPerPage = 9;
 
+  const carsPerPage = 9;
   const [carForRender, setCarForRender] = useState<VehicleI[]>(vehiclesStore.filterVehicle);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [totalPage, setTotalPage] = useState<number>(0);
@@ -37,6 +40,7 @@ function Home() {
     <main>
       <section className="filtersAndSortSection">
         <Filters />
+        <Fuel setPageNumber={setPageNumber} />
         <Sort setPageNumber={setPageNumber} />
         <AddCar />
       </section>
