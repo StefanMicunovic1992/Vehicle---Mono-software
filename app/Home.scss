@@ -4,7 +4,6 @@ main {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding: 10px 0;
   
     .filtersAndSortSection {
         display: flex;
@@ -12,6 +11,7 @@ main {
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 50px 0;
     }
   
     .carsSection {
