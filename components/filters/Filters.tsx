@@ -1,52 +1,45 @@
 'use client';
 
-import React, { useEffect, useId } from 'react';
+import React, { useId } from 'react';
 import './Filters.scss';
-import { useVehiclesStore } from '@/store/store';
+import { useVehiclesStore } from '@/common/store/store';
 import { observer } from 'mobx-react';
 import Select from 'react-select';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import setParamsInUrl from '@/common/utils/setParamsInUrl';
 
 function Filters() {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const vehiclesStore = useVehiclesStore();
-
-  useEffect(() => {
-    if (vehiclesStore.filterItems.length !== 0) {
-      console.log('provera stanja', JSON.stringify(vehiclesStore.filterItems));
-      const searchFiltersInUrl = searchParams.get('filter')?.split(',');
-
-      if (searchFiltersInUrl) {
-        const matchedItems = vehiclesStore.filterItems.filter((item) => searchFiltersInUrl?.some((brand) => item.value === brand));
-        console.log('pogadjanje sa filterima', JSON.stringify(matchedItems));
-        vehiclesStore.setSelectedFilters(matchedItems);
-        vehiclesStore.getByBrands(matchedItems);
-      } else {
-        console.log('ne postoji');
-      }
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vehiclesStore.filterItems]);
 
   const setValue = (selected: any) => {
     if (selected.length === 0) {
-      router.push(pathname);
+      vehiclesStore.setSelectedFilters(selected);
       vehiclesStore.getAllCar();
-      vehiclesStore.setSelectedFilters(selected);
     } else {
-      const selectedValues = selected.map((item: { value: string; }) => item.value);
-      router.push(`?filter=${selectedValues}`);
-      vehiclesStore.getByBrands(selected);
       vehiclesStore.setSelectedFilters(selected);
+      vehiclesStore.getByBrands(selected);
     }
+
+    const fuelSelected = vehiclesStore.selectedFuel;
+    const filterSelected = vehiclesStore.selectedFilters;
+    const sortSelected = vehiclesStore.selectedSort;
+    const stringForUrl = setParamsInUrl(fuelSelected, filterSelected, sortSelected);
+    router.push(stringForUrl);
   };
 
   return (
     <article className="filters">
-      <h3>Get by brends...</h3>
-      <Select className="filterSelect" instanceId={useId()} value={vehiclesStore.selectedFilters} onChange={setValue} options={vehiclesStore.filterItems} placeholder="Brands" isMulti />
+      <h3>Brends...</h3>
+      <Select
+        className="filterSelect"
+        instanceId={useId()}
+        value={vehiclesStore.selectedFilters}
+        onChange={setValue}
+        options={vehiclesStore.filterItems}
+        placeholder="Brands"
+        isMulti
+      />
     </article>
   );
 }
