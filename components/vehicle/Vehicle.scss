@@ -30,12 +30,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     gap: 30px;
     font-size: 1.5rem;
 
     .icon {
-      color: green;
+      width: 50%;
+    }
+
+    h3 {
+      width: 50%;
     }
   }
 }

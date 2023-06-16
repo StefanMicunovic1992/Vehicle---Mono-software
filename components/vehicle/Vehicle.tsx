@@ -3,11 +3,13 @@
 import './Vehicle.scss';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import VehicleI from '@/interface/Vehicle';
+import VehicleI from '@/common/interface/Vehicle';
 import { observer } from 'mobx-react';
-import { useVehiclesStore } from '@/store/store';
+import { useVehiclesStore } from '@/common/store/store';
 import Card from '@mui/material/Card';
 import { FaMoneyBillAlt } from 'react-icons/fa';
+import { SiSpeedtest } from 'react-icons/si';
+import { BsFillFuelPumpFill } from 'react-icons/bs';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PriceChangeOutlinedIcon from '@mui/icons-material/PriceChangeOutlined';
 import Button from '@mui/material/Button';
@@ -30,6 +32,8 @@ function Vehicle({ car, setShowOrHideGallery }: VehicleProps) {
     price,
     image,
     id,
+    hp,
+    fuel,
   } = car;
 
   const deleteVehicle = () => {
@@ -56,11 +60,26 @@ function Vehicle({ car, setShowOrHideGallery }: VehicleProps) {
         <FaMoneyBillAlt className="icon" />
         <h3>{formatPrice(price)}</h3>
       </div>
+      <div className="price">
+        <BsFillFuelPumpFill className="icon" />
+        <h3>{fuel}</h3>
+      </div>
+      <div className="price">
+        <SiSpeedtest className="icon" />
+        <h3>
+          {hp}
+          hp
+        </h3>
+      </div>
       {showOrHideNewPrice && <SetNewPrice id={id} setShowOrHideNewPrice={setShowOrHideNewPrice} />}
       <div>
         <Stack direction="row" spacing={3}>
-          <Button variant="contained" size="small" startIcon={<PriceChangeOutlinedIcon />} onClick={() => setShowOrHideNewPrice(true)}>Change price</Button>
-          <Button variant="contained" size="small" color="error" startIcon={<DeleteIcon />} onClick={deleteVehicle}>Delete vehicle</Button>
+          <Button variant="contained" size="small" startIcon={<PriceChangeOutlinedIcon />} onClick={() => setShowOrHideNewPrice(true)}>
+            Change price
+          </Button>
+          <Button variant="contained" size="small" color="error" startIcon={<DeleteIcon />} onClick={deleteVehicle}>
+            Delete vehicle
+          </Button>
         </Stack>
       </div>
     </Card>
