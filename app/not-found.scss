@@ -1,0 +1,12 @@
+.notFoundSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 92vh;
+
+    h2 {
+        font-size: 3rem;
+    }
+}
