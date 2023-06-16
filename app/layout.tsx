@@ -1,7 +1,7 @@
 import React from 'react';
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { VehiclesProvider } from '@/store/store';
+import { VehiclesProvider } from '@/common/store/store';
 import Header from '@/components/header/Header';
 
 export const metadata = {
@@ -14,18 +14,12 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
       <body>
         <Header />
-        <VehiclesProvider>
-          {children}
-        </VehiclesProvider>
+        <VehiclesProvider>{children}</VehiclesProvider>
       </body>
     </html>
   );
