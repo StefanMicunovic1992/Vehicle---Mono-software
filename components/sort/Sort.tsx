@@ -1,17 +1,12 @@
 'use client';
 
-import React from 'react';
-import { useVehiclesStore } from '@/store/store';
+import React, { useId } from 'react';
+import './Sort.scss';
+import { useVehiclesStore } from '@/common/store/store';
 import { observer } from 'mobx-react';
 import Select from 'react-select';
-
-const optionsForSort = [
-  { value: 'random', label: 'random' },
-  { value: 'price (desc)', label: 'price (desc)' },
-  { value: 'price (asc)', label: 'price (asc)' },
-  { value: 'name (desc)', label: 'name (decs)' },
-  { value: 'name (asc)', label: 'name (asc)' },
-];
+import { useRouter } from 'next/navigation';
+import setParamsInUrl from '@/common/utils/setParamsInUrl';
 
 interface OptionsForSortProps {
   value: string;
@@ -19,14 +14,16 @@ interface OptionsForSortProps {
 }
 
 interface SortProps {
-  setPageNumber: React.Dispatch<React.SetStateAction<number>>
+  setPageNumber: React.Dispatch<React.SetStateAction<number>>;
 }
 
 function Sort({ setPageNumber }: SortProps) {
+  const router = useRouter();
   const vehiclesStore = useVehiclesStore();
 
-  const sortByPrice = (selected: OptionsForSortProps | null) => {
+  const sortBy = (selected: OptionsForSortProps | null) => {
     const inputString = selected?.value;
+    vehiclesStore.setSelectedSort(selected);
 
     if (inputString !== null && inputString !== 'random' && inputString !== undefined) {
       const parts = inputString.split('(');
@@ -35,19 +32,27 @@ function Sort({ setPageNumber }: SortProps) {
 
       if (typeOfSort === 'price') {
         vehiclesStore.sortByPrice(descOrAsc);
-      } else {
+      } else if (typeOfSort === 'name') {
         vehiclesStore.sortByName(descOrAsc);
+      } else {
+        vehiclesStore.sortByHP(descOrAsc);
       }
     } else {
       vehiclesStore.sortRandom();
     }
 
     setPageNumber(1);
+    const fuelSelected = vehiclesStore.selectedFuel;
+    const filterSelected = vehiclesStore.selectedFilters;
+    const sortSelected = vehiclesStore.selectedSort;
+    const stringForUrl = setParamsInUrl(fuelSelected, filterSelected, sortSelected);
+    router.push(stringForUrl);
   };
+
   return (
-    <article>
+    <article className="sort">
       <h3>Sort by...</h3>
-      <Select placeholder="sort..." onChange={sortByPrice} options={optionsForSort} />
+      <Select className="sortSelect" value={vehiclesStore.selectedSort} placeholder="sort..." instanceId={useId()} onChange={sortBy} options={vehiclesStore.allValueForSort} />
     </article>
   );
 }
