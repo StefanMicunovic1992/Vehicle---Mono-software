@@ -1,8 +1,12 @@
 'use client';
 
-import React, { useState, ChangeEvent } from 'react';
-import { useVehiclesStore } from '@/store/store';
+import React, { useState } from 'react';
+import './SetNewPrice.scss';
+import { useVehiclesStore } from '@/common/store/store';
 import { observer } from 'mobx-react';
+import TextField from '@mui/material/TextField';
+import { BsCheck } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
 
 interface SetNewPriceProps {
   id: string;
@@ -21,7 +25,7 @@ function SetNewPrice({ id, setShowOrHideNewPrice }: SetNewPriceProps) {
     }
   };
 
-  const hendleNewPrice = (e: ChangeEvent<HTMLInputElement>) => {
+  const hendleNewPrice = (e: any) => {
     const inputValue = e.target.value;
     const regex = /^[0-9\b]+$/;
 
@@ -31,18 +35,10 @@ function SetNewPrice({ id, setShowOrHideNewPrice }: SetNewPriceProps) {
   };
   return (
     <div className="newPrice">
-      <input
-        type="text"
-        placeholder="set new price"
-        value={newPrice}
-        onChange={(e) => hendleNewPrice(e)}
-      />
-      <button type="button" onClick={updatePrice}>
-        Save
-      </button>
-      <button type="button" onClick={() => setShowOrHideNewPrice(false)}>
-        Close
-      </button>
+      {/* <input type="text" placeholder="set new price" value={newPrice} onChange={(e) => hendleNewPrice(e)} /> */}
+      <TextField required margin="dense" label="Set new price" fullWidth variant="standard" value={newPrice} onChange={(e) => hendleNewPrice(e)} />
+      <BsCheck onClick={updatePrice} className="newPriceIcon confirm" />
+      <AiOutlineClose onClick={() => setShowOrHideNewPrice(false)} className="newPriceIcon close" />
     </div>
   );
 }

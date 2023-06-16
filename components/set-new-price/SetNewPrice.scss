@@ -1,0 +1,17 @@
+.newPriceIcon {
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.close {
+    color: red;
+}
+
+.confirm {
+    color: green;
+}
